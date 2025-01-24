@@ -1,4 +1,13 @@
-// Array Methods
+// Arrow functions
+const sumar2 = (a,b) => console.log(a + b);
+sumar2(10,8);
+
+const aprendiendo = tecnologia => console.log(`Aprendiendo ${tecnologia}`) // cuando solo tiene un parametro los parentesis () son opcionales y si solo es una linea de codigo los corchetes {} tambien son opcionales
+aprendiendo('JavaScript');
+
+
+
+
 
 const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo'];
 
@@ -14,39 +23,35 @@ const carrito = [
 ];
 
 // forEach
-meses.forEach(function(mes){
+meses.forEach(mes => {
     if(mes == 'Marzo') {
         console.log('Marzo si existe');
     }
 });
 
-// Includes
-
-let resultado = meses.includes('Marzo');
-
+let resultado = 0;
 // Some ideal para arreglo de objetos
-resultado = carrito.some(function(producto){
-    return producto.nombre == 'Celular'
-});
+resultado = carrito.some(producto => producto.nombre == 'Celular'
+);
 
 // Reduce
 // resultado = carrito.reduce(function(total, producto){
 //     return total + producto.precio
 // },0);
 
-resultado = carrito.reduce((total,producto) => total + producto.precio,0); // esto es lo mismo que lo de arriba
+resultado = carrito.reduce((total,producto) => total + producto.precio,0);
+
 
 
 // Filter
 
-resultado =  carrito.filter(function(producto){
-    return producto.precio > 400
-});
+resultado =  carrito.filter(producto => producto.precio > 400
+);
 
-resultado = carrito.filter(function(producto){
-    return producto.nombre !== 'Celular'
-});
-
-
-
+resultado = carrito.filter(producto =>  producto.nombre !== 'Celular'
+);
 console.log(resultado);
+
+
+
+
