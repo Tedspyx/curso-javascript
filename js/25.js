@@ -14,4 +14,5 @@ const carrito = [
 carrito.forEach(producto => console.log(producto));
 
 //map se usa mas si se va a crear un arreglo mas
-carrito.map(producto => console.log(producto));
+const arreglo = carrito.map(producto => `${producto.nombre} - ${producto.precio}`);
+console.log(arreglo);
